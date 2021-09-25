@@ -1,6 +1,6 @@
 <template>
   <section class="w-full py-4 flex justify-center items-center px-10">
-      <section :key="route.path" class="flex-1 prose md:prose-lg max-w-4xl w-full prose-theme-purple selection:bg-blueGray-900/10 selection:text-blueGray-900 p-6 bg-white pb-40 bg-white" id="grid-main">
+      <section :key="route.path" class="bg-white selection:bg-blueGray-900/10 selection:text-blueGray-900 prose-theme-purple  prose prose-sm max-w-6xl w-full sm:prose-lg md:prose-xl lg:pt-16 md:pt-10 sm:p-8" id="grid-main">
         <Content />
       </section>
   </section>
@@ -10,3 +10,4 @@
 import { useRoute } from 'vitepress';
 const route = useRoute();
 </script>
+

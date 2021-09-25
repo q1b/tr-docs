@@ -38,6 +38,20 @@ module.exports = {
     //   { type: 'module', src: 'https://js.withorbit.com/orbit-web-component.js', async: true },
     // ],
   ],
+  themeConfig: {
+     nav: [
+      { text: 'Guide', link: '/', activeMatch: '^/$|^/guide/' },
+      {
+        text: 'Config Reference',
+        link: '/config/basics',
+        activeMatch: '^/config/'
+      },
+      {
+        text: 'Release Notes',
+        link: 'https://github.com/vuejs/vitepress/releases'
+      }
+    ],
+  },
   markdown: {
     config(app) {
       //app.use(footnote);

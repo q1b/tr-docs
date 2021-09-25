@@ -6,6 +6,7 @@
   "author": "XSukhpreet <sukhpreetben10@gmail.com>",
   "private": true,
   "scripts": {
+    "dev":"vitepress dev src",
     "docs:build": "vitepress build src",
     "docs:serve": "vitepress serve src"
   },

@@ -3,7 +3,7 @@
 > Sorry, I released this component many days ago, but forgot to share docs,
 You can see there are many options here to pass to `Tr Component`
 
-<section class="flex">
+<section class="grid lg:grid-cols-2 grid-cols-1 place-content-center">
 
 ```js
 ---
@@ -18,7 +18,7 @@ const {  clx, sty, uid, toId, show,
 ---
 ```
 
-<div class="pl-10">
+<div class="">
 
 Every Option is there to serve it's purpose, Let take a **quick overview**,
 
@@ -134,3 +134,26 @@ Future seems pretty beautiful as of now, in next month I would like to give feat
 -> scroll linked animation 
 
 Hope that You will 💖💖 this component, And make it better by each day .
+
+<script client>
+import 'https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js';
+function animateHeaders() {
+  let headers = document.querySelectorAll('p');
+  for (let i = 0; i < headers.length; i++) {
+    headers[i].animate([
+        {transform: 'translateX(-10px)',
+         opacity: 0},
+        {transform: 'none',
+         opacity: 1}], {
+        duration: 10000,
+        fill: 'both',
+        timeline: new ScrollTimeline({
+            scrollOffsets: [{target: headers[i], edge: 'end', rootMargin: '-20px', clamp: true},
+                            {target: headers[i], edge: 'end', threshold: 1, rootMargin: '-20px', clamp: true}],
+            fill: 'both',
+        })
+    });
+  }
+}
+animateHeaders()
+</script>

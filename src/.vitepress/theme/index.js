@@ -1,7 +1,6 @@
 import Layout from './Layout.vue';
 import NotFound from './NotFound.vue';
 import Stage from './components/Stage.vue';
-
 import './main.css';
 
 export default {
